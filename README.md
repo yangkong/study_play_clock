@@ -1,16 +1,41 @@
-# study_play_clock
+# STUDY PLAY CLOCK
 
-A new Flutter project.
+**이 프로젝트는 100% AI 코딩으로 제작된 자녀 시간 관리 솔루션입니다.**
 
-## Getting Started
+`STUDY PLAY CLOCK`은 자녀의 공부와 게임 시간을 효율적으로 관리하고, 부모가 원격에서 실시간으로 모니터링 및 제어할 수 있도록 설계된 플러터(Flutter) 기반 애플리케이션입니다. 기획부터 구현, 리팩토링, 아이콘 생성 및 배포 설정까지 모든 과정이 AI 가이드를 통해 완성되었습니다.
 
-This project is a starting point for a Flutter application.
+## 🚀 프로젝트 개요
 
-A few resources to get you started if this is your first Flutter project:
+자녀가 스스로 공부 시간을 쌓고, 그 시간을 게임 시간으로 전환하여 사용할 수 있는 '시간 저금통' 개념을 도입하였습니다. 부모는 별도의 관리 페이지를 통해 자녀의 활동을 원격으로 지원하고 가이드할 수 있습니다.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## ✨ 주요 기능
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### 1. 공부 및 게임 타이머
+- **공부 모드**: 공부를 시작하면 누적 시간이 1초당 1초씩 증가합니다.
+- **게임 모드**: 저축한 누적 시간을 소진하며 게임을 즐길 수 있습니다. 시간이 모두 소진되면 알람이 울리고 활동이 종료됩니다.
+- **아날로그 시계**: 직관적인 UI를 위해 아날로그 시계가 현재 활동 상태를 시각적으로 보여줍니다.
+
+### 2. 부모 전용 관리 메뉴
+- **비밀번호 보호**: 부모 전용 메뉴는 4자리 비밀번호 설정을 통해 자녀의 접근을 제한합니다.
+- **기기 연결 (QR 코드)**: FCM(Firebase Cloud Messaging)을 기반으로 기기 간 연결을 지원합니다. QR 코드를 스캔하여 간편하게 자녀 기기를 등록할 수 있습니다.
+
+### 3. 실시간 원격 제어 및 모니터링
+- **원격 시간 조절**: 부모 기기에서 자녀 기기의 남은 시간을 즉시 늘리거나 줄일 수 있습니다.
+- **원격 활동 제어**: 자녀 기기의 공부 시작, 게임 시작, 활동 정지 명령을 원격으로 전송할 수 있습니다.
+- **실시간 상태 확인**: 자녀 기기의 현재 상태(공부 중, 게임 중, 정지)와 남은 시간을 실시간으로 요청하고 보고받을 수 있습니다.
+
+### 4. 스마트 알림 및 설정
+- **푸시 알림**: 활동 상태 변경이나 시간 만료 시 부모와 자녀 모두에게 실시간 알림을 제공합니다.
+- **화면 꺼짐 방지**: 공부나 게임 중 흐름이 끊기지 않도록 앱 실행 중에는 화면이 계속 유지됩니다.
+- **커스텀 아이콘**: 전용 에셋을 활용한 독자적인 앱 아이콘이 적용되었습니다.
+
+## 🛠 기술 스택
+
+- **Framework**: Flutter
+- **State Management**: Provider
+- **Backend Service**: Firebase (FCM, Core)
+- **Local Storage**: Shared Preferences
+- **Hardware Interaction**: Camera (Scanner), Audio Player, Wakelock
+
+---
+**STUDY PLAY CLOCK** - AI와 함께 만드는 올바른 디지털 습관
